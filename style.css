@@ -1,60 +1,202 @@
+.top {
+    background-color: #24252a;
+}
+
+.topnav {
+    overflow: hidden;
+}
+
+.topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.active {
+    background-color: #04AA6D;
+    color: white;
+}
+
+.topnav .icon {
+    display: none;
+}
+
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+
+.dropdown .dropbtn {
+    font-size: 17px;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: transparent;
+    font-family: inherit;
+    margin: 0;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: transparent;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    float: none;
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.topnav a:hover,
+.dropdown:hover .dropbtn {
+    background-color: transparent;
+    color: white;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+@media screen and (max-width: 600px) {
+    .topnav a:not(:first-child),
+    .dropdown .dropbtn {
+        display: none;
+    }
+    .topnav a.icon {
+        float: right;
+        display: block;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .topnav.responsive {
+        position: relative;
+    }
+    .topnav.responsive .icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    .topnav.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+    .topnav.responsive .dropdown {
+        float: none;
+    }
+    .topnav.responsive .dropdown-content {
+        position: relative;
+    }
+    .topnav.responsive .dropdown .dropbtn {
+        display: block;
+        width: 100%;
+        text-align: left;
+    }
+}
+
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+}
+
+
+/*----------------------------- top nav Start here----------------------------*/
+
+.logo {
+    width: auto;
+    height: 20px;
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-.navbar {
-    display: flex;
-    align-items: center;
-    padding: 20px
+
+/*----------------------------- top nav end here----------------------------*/
+
+
+/*----------------------------- Row and col for header section start here----------------------------*/
+
+header {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), transparent), url(germany-munich-germany-munich-wallpaper-preview.jpg);
+    background-size: cover;
+    background-position: center;
+    padding: 0 8%;
+    position: relative;
+    overflow: hidden;
 }
 
-nav {
-    flex: 1;
-    text-align: right;
+.text-box {
+    color: #fff;
+    position: absolute;
+    bottom: 8%;
 }
 
-nav ul {
-    display: inline-block;
-    list-style-type: none;
+.text-box p {
+    font-size: 30px;
+    font-weight: 600;
 }
 
-nav ul li {
-    display: inline-block;
-    margin-right: 20px;
+.text-box h1 {
+    font-family: Lobster;
+    font-size: 50px;
+    line-height: 160px;
+    margin-left: -10px;
+    color: transparent;
+    -webkit-text-stroke: 1px #fff;
+    background: url(back.png);
+    -webkit-background-clip: text;
+    background-position: 0 0;
+    animation: back 20s linear infinite;
 }
 
-a {
-    text-decoration: none;
-    color: #555;
+@keyframes back {
+    100% {
+        background-position: 2000px 0;
+    }
 }
 
-p {
-    color: #555;
-}
-
-.container {
-    max-width: 1300px;
-    margin: auto;
-    padding-left: 25px;
-    padding-right: 25px;
+.text-box h3 {
+    font-size: 20px;
+    font-weight: 300;
 }
 
 .row {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: flex-start;
+    overflow: hidden;
 }
 
 .col-2 {
     flex-basis: 50%;
-    min-width: 300px;
+    min-width: 500px;
+    color: #f2f2f2;
+    text-align: center;
+    justify-content: flex-start;
 }
 
 .col-2 img {
@@ -62,421 +204,402 @@ p {
     padding: 50px 0;
 }
 
-.col-2 h1 {
+.col-2 h3 {
     font-size: 50px;
-    line-height: 60px;
-    margin: 25px 0;
+    font-family: zillaslab;
+    color: #f2f2f2;
 }
 
-.btn {
-    display: inline-block;
-    background: #ff523b;
-    color: #fff;
-    padding: 8px 30px;
-    margin: 30px 0;
-    border-radius: 30px;
-    transition: background 0.5s;
-}
 
-.btn:hover {
-    background: #563434;
-}
+/*----------------------------- Row and col end here----------------------------*/
 
-.header {
-    background: radial-gradient(#fff, #ffd6d6);
-}
 
-.header .row {
-    margin-top: 70px;
-}
+/*----------------------------- slogan end here----------------------------*/
 
-.categories {
-    margin: 70px 0;
-}
 
-.col-3 {
-    flex-basis: 30%;
-    min-width: 250px;
-    margin-bottom: 30px;
-}
+/*----------------------------- slogan end here----------------------------*/
 
-.col-3 img {
+
+/*----------------------------- league class start here----------------------------*/
+
+.league {
     width: 100%;
+    overflow: hidden;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    color: black;
+    background: radial-gradient(rgb(189, 156, 156), #f8b8b8);
 }
 
-.small-container {
-    max-width: 1080px;
-    margin: auto;
-    padding-left: 25px;
-    padding-right: 25px;
+.league .col-2 {
+    flex-basis: 50%;
+    min-width: 300px;
+    color: #f2f2f2;
 }
 
-.col-4 {
-    flex-basis: 25%;
-    padding: 10px;
-    min-width: 200px;
-    margin-bottom: 50px;
-    transition: transform 0.5s;
-}
-
-.col-4 img {
-    width: 100%;
-}
-
-.title {
-    text-align: center;
-    margin: 0 auto 80px;
-    position: relative;
-    line-height: 60px;
-    color: #555;
-}
-
-.title::after {
-    content: '';
-    background: #ff523b;
-    width: 80px;
-    height: 5px;
-    border-radius: 5px;
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
+.league .col-2 h3,
 h4 {
-    color: #555;
-    font-weight: normal;
+    color: #24252a;
 }
 
-.col-4 p {
-    font-size: 14px;
+.league .col-2 .ycfl-img {
+    width: 260px;
+    padding: 30px 0px;
 }
 
-.rating .fa {
-    color: #ff523b;
-}
-
-.col-4:hover {
-    transform: translateY(-5px)
-}
-
-
-/*------Offer------*/
-
-.offer {
-    background: radial-gradient(#fff, #ffd6d6);
-    margin-top: 80px;
-    padding: 30px 0;
-}
-
-.col-2 .offer img {
-    padding: 50px;
-}
-
-small {
-    color: #555;
-}
-
-
-/*------Brands------*/
-
-.brands {
-    margin: 100px auto;
-}
-
-.col-5 {
-    width: 160px;
-}
-
-.col-5 img {
+.league .col-2 .ycfl-img img {
     width: 100%;
-    cursor: pointer;
 }
 
-
-/*--------footer-------*/
-
-.footer {
-    background-color: #000;
-    color: #8a8a8a;
-    font-size: 14px;
-    padding: 60px 0 20px;
-}
-
-.footer p {
-    color: #8a8a8a;
-}
-
-.footer h3 {
-    color: #fff;
-    margin-bottom: 20px;
-}
-
-.footer .col-1,
-.footer .col-2,
-.footer .col-3,
-.footer .col-4 {
-    min-width: 250px;
-    margin-bottom: 20px;
-}
-
-.footer .col-1 {
-    flex-basis: 30%;
-}
-
-.footer .col-2 {
-    flex: 1;
-    text-align: center;
-}
-
-.footer .col-2 img {
-    width: 180px;
-    margin-bottom: 20px;
-}
-
-.footer .col-3,
-.footer .col-4 {
-    flex-basis: 12%;
-    text-align: center;
-}
-
-ul {
-    list-style: none;
-}
-
-.app-logo {
+.btn-league {
     margin-top: 20px;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 50px;
+    color: #f2f2f2;
+    background-color: #24252a;
 }
 
-.app-logo img {
-    width: 140px;
+.btn-league:hover {
+    background-color: violet;
 }
 
-.footer hr {
-    border: none;
-    background-color: #b5b5b5;
-    height: 1px;
-    margin: 20px 0;
-}
 
-.copyright {
+/*----------------------------- League class end here----------------------------*/
+
+
+/*-----------------------------teams class start here----------------------------*/
+
+.ycfl-teams {
+    padding: 30px;
+    background-color: #24252a;
     text-align: center;
 }
 
-.menu-icon {
-    width: 28px;
-    margin-left: 20px;
-    display: none;
+.ycfl-teams h2,
+h1 {
+    font-family: zillaslab;
+    margin-bottom: 30px;
+    color: #f2f2f2;
+}
+
+.ycfl-teams .row .teams {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-right: 30px;
+    margin-left: 30px;
+    display: inline-block;
 }
 
 
-/*--------- media query for menu-----------*/
+/*----------------------------- teams class end here----------------------------*/
 
-@media only screen and (max-width: 800px) {
-    nav ul {
-        position: absolute;
-        top: 70px;
-        left: 0;
-        background-color: #333;
-        width: 100%;
-        overflow: hidden;
-        transition: max-height 0.5s;
-    }
-    nav ul li {
-        display: block;
-        margin-right: 50px;
-        margin-top: 10px;
-        margin-bottom: 10px;
-    }
-    nav ul li a {
-        color: #fff;
-    }
-    .menu-icon {
-        display: block;
-        cursor: pointer;
-    }
+
+/*-----------------------------teams class start here----------------------------*/
+
+.zi-img {
+    width: 300px;
+    margin-left: 185px;
+}
+
+.zi-img img {
+    width: 100%;
+}
+
+.zi-teams {
+    padding: 30px;
+    background: radial-gradient(rgb(189, 156, 156), #f8b8b8);
+    text-align: center;
+}
+
+.zi-teams h2,
+h1 {
+    font-family: zillaslab;
+    margin-bottom: 30px;
+    color: #24252a;
+}
+
+.zi-teams .row .teams {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-right: 30px;
+    margin-left: 30px;
+    display: inline-block;
 }
 
 
-/*--------- media query for less than 600 screen size-----------*/
+/*----------------------------- teams class end here----------------------------*/
 
-@media only screen and (max-width: 600px) {
-    .row {
+
+/*----------------------------- Footer start here----------------------------*/
+
+footer {
+    padding-top: 50px;
+    background-color: #24252a;
+}
+
+footer h3,
+p {
+    font-family: montserrat;
+    margin-top: 30px;
+    text-align: center;
+    color: #f2f2f2;
+}
+
+footer ul li {
+    list-style: none;
+    padding: 8px;
+    align-items: center;
+    margin: 40px;
+    display: inline-block;
+}
+
+footer ul li {
+    color: #f2f2f2;
+}
+
+
+/*----------------------------- Footer end here--------------------------*/
+
+
+/*----------------------------- Table class Start here  end here----------------------------*/
+
+.ycfl-table {
+    text-align: center;
+    color: #f2f2f2;
+    background-color: #24252a;
+}
+
+.ycfl-table h3 {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.ycfl-table table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.ycfl-table table .table-left {
+    float: left;
+    text-align: left;
+}
+
+.ycfl-table table th,
+td {
+    text-align: center;
+    padding: 7px;
+}
+
+.ycfl-matches {
+    background: radial-gradient(rgb(189, 156, 156), #f8b8b8);
+    text-align: center;
+}
+
+.score {
+    font-size: 70px;
+}
+
+.ycfl-matches h4 {
+    text-align: center;
+    color: #24252a;
+    padding-bottom: 5px;
+}
+
+.ycfl-match {
+    display: inline-flex;
+    text-align: center;
+    align-content: center;
+}
+
+.ycfl-match h1 {
+    padding-top: 115px;
+}
+
+.team-img {
+    margin: 50px;
+    width: 200px;
+}
+
+.team-img p,
+a {
+    font-weight: 700;
+    color: #24252a;
+    text-decoration: none;
+    text-align: center;
+    padding-top: 10px;
+}
+
+.team-img img {
+    width: 100%;
+}
+
+.hr {
+    border-top: 2px solid #24252a;
+}
+
+hr {
+    border-top: 2px solid #24252a;
+}
+
+
+/*----------------------------- Table class Start here end here----------------------------*/
+
+
+/*----------------------------- media query for header start here----------------------------*/
+
+@media screen and (max-width: 600px) {
+    .col-2 {
+        flex-basis: 50%;
+        min-width: 300px;
+        margin-left: 30px;
+        position: relative;
         text-align: center;
     }
-    .col-2,
-    .col-3,
-    .col-4 {
-        flex-basis: 100%;
+    .col-2 h3,
+    h4,
+    button {
+        margin-left: 50px;
     }
-    .single-product .row {
-        text-align: left;
+    .col-2 img {
+        max-width: 100%;
+        margin-left: 30px;
+        padding: 50px 0px;
     }
-    .single-product .col-2 {
-        padding: 20px 0;
+    .zi-img {
+        width: 200px;
+        margin-left: 20px;
     }
-    .single-product h1 {
-        font-size: 26px;
-        line-height: 32px;
-    }
-    .cart-info p {
-        display: none;
+    .ycfl-matches h4 {
+        text-align: center;
+        color: #24252a;
+        padding-bottom: 5px;
     }
 }
 
 
-/*-----------All Products page------------*/
+/*----------------------------- media query for header end here----------------------------*/
 
-.row-2 {
-    justify-content: space-between;
-    margin: 100px auto 50px;
-}
 
-select {
-    border: 1px solid #ff523b;
-    padding: 5px;
-}
+/*----------------------------- media query for slogan end here----------------------------*/
 
-select:focus {
-    outline: none;
-}
-
-.page-btn {
-    margin: 0 auto 80px;
-}
-
-.page-btn span {
-    display: inline-block;
-    border: 1px solid #ff523b;
-    margin-left: 10px;
-    width: 40px;
-    height: 40px;
-    text-align: center;
-    line-height: 40px;
-    cursor: pointer;
-}
-
-.page-btn span:hover {
-    background-color: #ff523b;
-    color: #fff;
+@media screen and (max-width: 600px) {
+    .league .slogan {
+        margin-left: 50px;
+        text-align: center;
+        justify-content: space-around;
+    }
+    .league .col-2 .ycfl-img {
+        width: 230px;
+        padding: 50px 0px;
+    }
+    .league .slogan .ycfl-img img {
+        width: 100%;
+    }
 }
 
 
-/*-----------single product details*/
+/*----------------------------- media query for slogan end here----------------------------*/
 
-.single-product {
-    margin-top: 80px;
+
+/*----------------------------- media query for ycfl start here----------------------------*/
+
+@media screen and (max-width: 600px) {
+    .ycfl-teams {
+        padding: 30px;
+        background-color: #24252a;
+        text-align: center;
+    }
+    .ycfl-teams h2,
+    h1 {
+        font-family: zillaslab;
+        margin-bottom: 30px;
+        color: #f2f2f2;
+    }
+    .ycfl-teams .row .teams {
+        margin-top: 50px;
+        margin-bottom: 50px;
+        margin-right: 15px;
+        margin-left: 15px;
+        display: inline-block;
+    }
+    .score {
+        font-size: 30px;
+    }
+    .ycfl-matches h4 {
+        text-align: center;
+        color: #24252a;
+        margin-right: 60px;
+        padding-bottom: 30px;
+    }
+    .ycfl-match {
+        display: inline-flex;
+        text-align: center;
+        align-content: center;
+    }
+    .ycfl-match h1 {
+        padding-top: 50px;
+    }
+    .team-img {
+        margin: 25px;
+        width: 100px;
+    }
+    .team-img p,
+    a {
+        text-decoration: none;
+        text-align: center;
+        padding-top: 10px;
+    }
+    .team-img img {
+        width: 100%;
+    }
 }
 
-.single-product .col-2 img {
-    padding: 0;
-}
 
-.single-product .col-2 {
-    padding: 20px;
-}
+/*----------------------------- media query for ycfl end here----------------------------*/
 
-.single-product h4 {
-    margin: 20px 0;
-    font-size: 22px;
-    font-weight: bold;
-}
 
-.single-product select {
-    display: block;
-    padding: 10px;
-    margin-top: 20px;
-}
+/*----------------------------- media query for ycfl start here----------------------------*/
 
-.single-product input {
-    width: 50px;
-    height: 40px;
-    padding-left: 10px;
-    font-size: 20px;
-    margin-right: 10px;
-    border: 1px solid #ff523b;
-}
-
-input:focus {
-    outline: none;
-}
-
-.single-product .fa {
-    color: #ff523b;
-    margin-left: 10px;
-}
-
-.small-img-row {
-    display: flex;
-    justify-content: space-between;
-}
-
-.small-img-col {
-    flex-basis: 24%;
-    cursor: pointer;
+@media screen and (max-width: 600px) {
+    .zi-teams {
+        padding: 30px;
+        background: radial-gradient(rgb(189, 156, 156), #f8b8b8);
+        text-align: center;
+    }
+    .zi-teams h2,
+    h1 {
+        font-family: zillaslab;
+        margin-bottom: 30px;
+        color: #24252a;
+    }
+    .zi-teams .row .teams {
+        margin-top: 50px;
+        margin-bottom: 50px;
+        margin-right: 15px;
+        margin-left: 15px;
+        display: inline-block;
+    }
 }
 
 
-/*-------cart items details-------*/
+/*----------------------------- media query for ycfl end here----------------------------*/
 
-.cart-page {
-    margin: 80px auto;
+
+/*----------------------------- media query for FOOTER here----------------------------*/
+
+@media screen and (max-width: 600px) {
+    footer p,
+    h3 {
+        margin-left: 50px;
+    }
+    footer ul {
+        margin-left: 50px;
+    }
+    body {
+        width: 111%;
+    }
 }
 
-table {
-    width: 100%;
-    border-collapse: collapse;
-}
 
-.cart-info {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-th {
-    text-align: left;
-    padding: 5px;
-    color: #fff;
-    background: #ff523b;
-    font-weight: normal;
-}
-
-td {
-    padding: 10px 5px;
-}
-
-td input {
-    width: 40px;
-    height: 30px;
-    padding: 5px;
-}
-
-td a {
-    color: #ff523b;
-    font-size: 12px;
-}
-
-td img {
-    width: 80px;
-    height: 80px;
-    margin-right: 10px;
-}
-
-.total-price {
-    display: flex;
-    justify-content: flex-end;
-}
-
-.total-price table {
-    border-top: 3px solid #ff523b;
-    width: 100%;
-    max-width: 400px;
-}
-
-td:last-child {
-    text-align: right;
-}
-
-th:last-child {
-    text-align: right;
-}
+/*----------------------------- media query for Footer here----------------------------*/
